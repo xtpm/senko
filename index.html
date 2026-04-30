@@ -26,6 +26,10 @@
           <span class="desktop-asset about-mark" aria-hidden="true">i</span>
           <span>About Me</span>
         </button>
+        <button class="desktop-icon" type="button" data-open="media">
+          <span class="desktop-asset media-mark" aria-hidden="true">▶</span>
+          <span>Media Player</span>
+        </button>
         <button class="desktop-icon" type="button" data-open="bin">
           <img class="asset-icon desktop-asset" src="./assets/icons/recycle-bin.png" alt="" draggable="false" />
           <span>Recycle Bin</span>
@@ -91,7 +95,7 @@
         <footer class="statusbar">6 items</footer>
       </section>
 
-      <section class="window about-window uses-window" id="uses" style="left: 9%; top: 47%; width: 300px; height: 360px" aria-label="What I Use window">
+      <section class="window about-window uses-window active" id="uses" style="left: 9%; top: 47%; width: 300px; height: 360px" aria-label="What I Use window">
         <header class="window-titlebar xp-titlebar" data-drag-handle>
           <div class="title-left">
             <img class="asset-icon title-asset" src="./assets/icons/this-pc.png" alt="" draggable="false" />
@@ -108,7 +112,7 @@
             <legend>Hardware</legend>
             <ul>
               <li><span class="use-icon pc-icon"></span>Ryzen 5 5600X | 16GB | RTX 2070</li>
-              <li><span class="use-icon keyboard-icon"></span>Wooting 60HE</li>
+              <li><img class="use-icon use-img" src="./assets/icons/hardware-keyboard.svg" alt="" draggable="false" />Wooting 60HE</li>
               <li><span class="use-icon mouse-icon"></span>Pulsar Xlite V3 Large</li>
             </ul>
           </fieldset>
@@ -125,49 +129,75 @@
         </div>
       </section>
 
-      <section class="window hub-window github-window active" id="github" style="left: 9%; top: 11%; width: 560px; height: 438px" aria-label="GitHub portfolio window">
-        <header class="window-titlebar dark-titlebar" data-drag-handle>
+      <section class="window github-repos-window active" id="github" style="left: 9%; top: 10%; width: 390px; height: 410px" aria-label="GitHub repositories window">
+        <header class="window-titlebar xp-titlebar" data-drag-handle>
           <div class="title-left">
             <img class="asset-icon title-asset" src="./assets/icons/social-github.svg" alt="" draggable="false" />
-            <span>GitHub - xtpm</span>
+            <span>Repos</span>
           </div>
           <div class="window-controls">
-            <button type="button" data-minimize="github" aria-label="Minimize GitHub">-</button>
-            <button type="button" data-maximize="github" aria-label="Maximize GitHub">[]</button>
-            <button type="button" data-close="github" aria-label="Close GitHub">x</button>
+            <button type="button" data-minimize="github" aria-label="Minimize Repos">-</button>
+            <button type="button" data-maximize="github" aria-label="Maximize Repos">□</button>
+            <button type="button" data-close="github" aria-label="Close Repos">x</button>
           </div>
         </header>
-        <div class="hub-body">
-          <header class="hub-header">
-            <div>
-              <p class="hub-kicker">github.com/xtpm</p>
-              <h2>tpm / kuudere</h2>
-              <p>bypassing - 19 - i dont know to code</p>
-            </div>
-            <a class="hub-open" href="https://github.com/xtpm" target="_blank" rel="noreferrer">Open GitHub</a>
-          </header>
-          <section class="link-section">
-            <h3>Repositories</h3>
-            <a class="repo-link" href="https://github.com/xtpm/kitori" target="_blank" rel="noreferrer">
-              <strong>kitori</strong>
+        <div class="repo-window-body">
+          <div class="repo-toolbar">
+            <span>github.com/xtpm</span>
+            <button type="button" id="refreshRepos">Refresh</button>
+          </div>
+          <div class="repo-list" id="repoList" aria-live="polite">
+            <a class="repo-list-row" href="https://github.com/xtpm/kitori" target="_blank" rel="noreferrer">
+              <strong><img src="./assets/icons/folder.png" alt="" draggable="false" />kitori</strong>
               <span>personal site + friends sites</span>
-              <em>TypeScript</em>
+              <small><i class="lang-dot ts"></i>TypeScript ★ 0</small>
             </a>
-            <a class="repo-link" href="https://github.com/xtpm/konata" target="_blank" rel="noreferrer">
-              <strong>konata</strong>
+            <a class="repo-list-row" href="https://github.com/xtpm/konata" target="_blank" rel="noreferrer">
+              <strong><img src="./assets/icons/folder.png" alt="" draggable="false" />konata</strong>
               <span>aim+ website</span>
-              <em>CSS</em>
+              <small><i class="lang-dot css"></i>CSS ★ 0</small>
             </a>
-            <a class="repo-link" href="https://github.com/xtpm/haikonami" target="_blank" rel="noreferrer">
-              <strong>haikonami</strong>
+            <a class="repo-list-row" href="https://github.com/xtpm/haikonami" target="_blank" rel="noreferrer">
+              <strong><img src="./assets/icons/folder.png" alt="" draggable="false" />haikonami</strong>
               <span>kobeni.net landing page concept</span>
-              <em>CSS</em>
+              <small><i class="lang-dot css"></i>CSS ★ 0</small>
             </a>
-          </section>
+          </div>
+          <footer class="repo-statusbar">
+            <span>github.com/xtpm</span>
+            <span id="repoCount">3 repos</span>
+          </footer>
         </div>
       </section>
 
-      <section class="window about-window active" id="about" style="left: 35%; top: 16%; width: 410px; height: 350px" aria-label="About me window">
+      <section class="window github-contrib-window active" id="contributions" style="left: 30%; top: 56%; width: 735px; height: 210px" aria-label="GitHub contributions window">
+        <header class="window-titlebar xp-titlebar" data-drag-handle>
+          <div class="title-left">
+            <img class="asset-icon title-asset" src="./assets/icons/social-github.svg" alt="" draggable="false" />
+            <span>GitHub Contributions</span>
+          </div>
+          <div class="window-controls">
+            <button type="button" data-minimize="contributions" aria-label="Minimize GitHub Contributions">-</button>
+            <button type="button" data-maximize="contributions" aria-label="Maximize GitHub Contributions">□</button>
+            <button type="button" data-close="contributions" aria-label="Close GitHub Contributions">x</button>
+          </div>
+        </header>
+        <div class="contrib-body">
+          <div class="contrib-months" id="contribMonths" aria-hidden="true">
+            <span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span>
+          </div>
+          <div class="contrib-grid" id="contribGrid" aria-label="GitHub contribution heatmap"></div>
+          <div class="contrib-legend">
+            <span>Less</span><i></i><i></i><i></i><i></i><i></i><span>More</span>
+          </div>
+          <footer class="repo-statusbar contrib-statusbar">
+            <span>github.com/xtpm</span>
+            <span id="contribCount">486 contributions in the last year</span>
+          </footer>
+        </div>
+      </section>
+
+      <section class="window about-window active" id="about" style="left: 66%; top: 10%; width: 410px; height: 350px" aria-label="About me window">
         <header class="window-titlebar xp-titlebar" data-drag-handle>
           <div class="title-left">
             <span class="title-glyph about-mark" aria-hidden="true">i</span>
@@ -203,6 +233,46 @@
             <span id="lanyardName">Discord presence</span>
             <div class="lanyard-detail" id="lanyardDetail">Add your Discord user ID in script.js to enable Lanyard.</div>
             <div class="lanyard-activity" id="lanyardActivity">Waiting for api.lanyard.rest</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="window media-window" id="media" style="left: 47%; top: 32%; width: 430px; height: 430px" aria-label="Media Player window">
+        <header class="window-titlebar dark-titlebar media-titlebar" data-drag-handle>
+          <div class="title-left">
+            <span class="title-glyph media-mark" aria-hidden="true">▶</span>
+            <span>Media Player</span>
+          </div>
+          <div class="window-controls">
+            <button type="button" data-minimize="media" aria-label="Minimize Media Player">-</button>
+            <button type="button" data-maximize="media" aria-label="Maximize Media Player">□</button>
+            <button type="button" data-close="media" aria-label="Close Media Player">x</button>
+          </div>
+        </header>
+        <div class="media-body">
+          <div class="media-art" id="mediaArt">
+            <div class="media-placeholder">
+              <span>♪</span>
+              <p>Spotify idle</p>
+            </div>
+          </div>
+          <div class="media-overlay">
+            <div class="media-time-row">
+              <span id="mediaElapsed">0:00</span>
+              <div class="media-progress"><span id="mediaProgress"></span></div>
+              <span id="mediaDuration">0:00</span>
+            </div>
+            <div class="media-info">
+              <strong id="mediaTitle">Nothing playing</strong>
+              <span id="mediaArtist">Spotify via Lanyard</span>
+            </div>
+            <div class="media-controls" aria-hidden="true">
+              <span>⤨</span>
+              <span>‹</span>
+              <button type="button">Ⅱ</button>
+              <span>›</span>
+              <span>↻</span>
+            </div>
           </div>
         </div>
       </section>
@@ -318,6 +388,7 @@ This desktop is a Windows 10-style link hub for my GitHub projects and socials.<
         <button class="task-icon task-view" type="button" aria-label="Task View"></button>
         <button class="task-icon" type="button" data-open="github" aria-label="GitHub"><img class="asset-icon task-asset" src="./assets/icons/social-github.svg" alt="" draggable="false" /></button>
         <button class="task-icon" type="button" data-open="about" aria-label="About Me"><span class="task-mark about-mark" aria-hidden="true">i</span></button>
+        <button class="task-icon" type="button" data-open="media" aria-label="Media Player"><span class="task-mark media-mark" aria-hidden="true">▶</span></button>
         <button class="task-icon folder active" type="button" data-open="explorer" aria-label="File Explorer"><img class="asset-icon task-asset" src="./assets/icons/explorer.png" alt="" draggable="false" /></button>
         <button class="task-icon note" type="button" data-open="notepad" aria-label="Notepad"><img class="asset-icon task-asset" src="./assets/icons/notepad.png" alt="" draggable="false" /></button>
         <button class="task-icon gear" type="button" data-open="settings" aria-label="Settings"><img class="asset-icon task-asset" src="./assets/icons/settings.png" alt="" draggable="false" /></button>
