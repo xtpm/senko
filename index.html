@@ -16,7 +16,7 @@
         </button>
         <button class="desktop-icon" type="button" data-open="documents">
           <img class="asset-icon desktop-asset" src="./assets/icons/documents.png" alt="" draggable="false" />
-          <span>Documents</span>
+          <span>Friends</span>
         </button>
         <button class="desktop-icon" type="button" data-open="github">
           <img class="asset-icon desktop-asset" src="./assets/icons/social-github.svg" alt="" draggable="false" />
@@ -27,32 +27,24 @@
           <span>About Me</span>
         </button>
         <button class="desktop-icon" type="button" data-open="media">
-          <span class="desktop-asset media-mark" aria-hidden="true">▶</span>
+          <img class="asset-icon desktop-asset" src="./assets/icons/media-player.svg" alt="" draggable="false" />
           <span>Media Player</span>
-        </button>
-        <button class="desktop-icon" type="button" data-open="bin">
-          <img class="asset-icon desktop-asset" src="./assets/icons/recycle-bin.png" alt="" draggable="false" />
-          <span>Recycle Bin</span>
-        </button>
-        <button class="desktop-icon" type="button" data-open="notepad">
-          <img class="asset-icon desktop-asset" src="./assets/icons/notepad.png" alt="" draggable="false" />
-          <span>Notepad</span>
         </button>
       </section>
 
-      <section class="window explorer-window" id="explorer" style="left: 34%; top: 7%; width: 720px; height: 464px" aria-label="File Explorer window">
+      <section class="window explorer-window" id="explorer" style="left: 34%; top: 7%; width: 720px; height: 464px" aria-label="Friends window">
         <header class="window-titlebar" data-drag-handle>
           <div class="title-left">
-            <img class="asset-icon title-asset" src="./assets/icons/explorer.png" alt="" draggable="false" />
-            <span>File Explorer</span>
+            <img class="asset-icon title-asset" src="./assets/icons/documents.png" alt="" draggable="false" />
+            <span>Friends</span>
           </div>
           <div class="window-controls">
-            <button type="button" data-minimize="explorer" aria-label="Minimize File Explorer">-</button>
-            <button type="button" data-maximize="explorer" aria-label="Maximize File Explorer">□</button>
-            <button type="button" data-close="explorer" aria-label="Close File Explorer">×</button>
+            <button type="button" data-minimize="explorer" aria-label="Minimize Friends">-</button>
+            <button type="button" data-maximize="explorer" aria-label="Maximize Friends">□</button>
+            <button type="button" data-close="explorer" aria-label="Close Friends">×</button>
           </div>
         </header>
-        <nav class="ribbon" aria-label="File Explorer ribbon">
+        <nav class="ribbon" aria-label="Friends ribbon">
           <button class="selected" type="button">File</button>
           <button type="button">Home</button>
           <button type="button">Share</button>
@@ -62,40 +54,37 @@
           <button type="button" aria-label="Back">‹</button>
           <button type="button" aria-label="Forward">›</button>
           <button type="button" aria-label="Up">⌃</button>
-          <div class="crumb">Quick access</div>
+          <div class="crumb">Desktop &gt; Friends</div>
           <label class="explorer-search">
-            <span>Search Quick access</span>
-            <input aria-label="Search Quick access" />
+            <span>Search Friends</span>
+            <input aria-label="Search Friends" />
           </label>
         </div>
         <div class="explorer-body">
           <aside class="explorer-sidebar">
-            <button class="selected" type="button">Quick access</button>
+            <button class="selected" type="button">Friends</button>
             <button type="button">Desktop</button>
-            <button type="button">Downloads</button>
-            <button type="button">Documents</button>
-            <button type="button">Pictures</button>
-            <button type="button">This PC</button>
-            <button type="button">Network</button>
+            <button type="button">Website</button>
+            <button type="button">No link</button>
           </aside>
           <section class="explorer-content">
-            <h2>Frequent folders (6)</h2>
+            <h2>Friends (6)</h2>
             <div class="folder-grid">
-              <button type="button"><img class="asset-icon folder-asset" src="./assets/icons/folder.png" alt="" draggable="false" /><strong>Desktop</strong><small>This PC</small></button>
-              <button type="button"><img class="asset-icon folder-asset" src="./assets/icons/downloads.png" alt="" draggable="false" /><strong>Downloads</strong><small>This PC</small></button>
-              <button type="button"><img class="asset-icon folder-asset" src="./assets/icons/documents.png" alt="" draggable="false" /><strong>Documents</strong><small>This PC</small></button>
-              <button type="button"><img class="asset-icon folder-asset" src="./assets/icons/pictures.png" alt="" draggable="false" /><strong>Pictures</strong><small>This PC</small></button>
-              <button type="button"><img class="asset-icon folder-asset" src="./assets/icons/music.png" alt="" draggable="false" /><strong>Music</strong><small>This PC</small></button>
-              <button type="button"><img class="asset-icon folder-asset" src="./assets/icons/videos.png" alt="" draggable="false" /><strong>Videos</strong><small>This PC</small></button>
+              <a href="https://kuudere.cc/nyandere" target="_blank" rel="noreferrer"><img class="asset-icon folder-asset friend-avatar" src="./assets/friends/serena.jpg" alt="" draggable="false" /><strong>serena</strong><small>kuudere.cc/nyandere</small></a>
+              <button type="button"><img class="asset-icon folder-asset friend-avatar" src="./assets/friends/shad.jpg" alt="" draggable="false" /><strong>shad</strong><small>none</small></button>
+              <button type="button"><img class="asset-icon folder-asset friend-avatar" src="./assets/friends/vale.png" alt="" draggable="false" /><strong>vale</strong><small>none</small></button>
+              <button type="button"><img class="asset-icon folder-asset friend-avatar" src="./assets/friends/mke.png" alt="" draggable="false" /><strong>mke</strong><small>none</small></button>
+              <button type="button"><img class="asset-icon folder-asset friend-avatar" src="./assets/friends/pixel.png" alt="" draggable="false" /><strong>arturiafm</strong><small>none</small></button>
+              <button type="button"><img class="asset-icon folder-asset friend-avatar" src="./assets/friends/lennie.jpg" alt="" draggable="false" /><strong>lennie</strong><small>none</small></button>
             </div>
-            <h2>Recent files (0)</h2>
-            <p class="empty-recent">After you've opened some files, we'll show the most recent ones here.</p>
+            <h2>Status</h2>
+            <p class="empty-recent">Friends list loaded from the desktop profile.</p>
           </section>
         </div>
-        <footer class="statusbar">6 items</footer>
+        <footer class="statusbar">6 friends</footer>
       </section>
 
-      <section class="window about-window uses-window active" id="uses" style="left: 9%; top: 47%; width: 300px; height: 360px" aria-label="What I Use window">
+      <section class="window about-window uses-window active" id="uses" style="left: 11%; top: 56%; width: 300px; height: 360px" aria-label="What I Use window">
         <header class="window-titlebar xp-titlebar" data-drag-handle>
           <div class="title-left">
             <img class="asset-icon title-asset" src="./assets/icons/this-pc.png" alt="" draggable="false" />
@@ -113,7 +102,7 @@
             <ul>
               <li><span class="use-icon pc-icon"></span>Ryzen 5 5600X | 16GB | RTX 2070</li>
               <li><img class="use-icon use-img" src="./assets/icons/hardware-keyboard.svg" alt="" draggable="false" />Wooting 60HE</li>
-              <li><span class="use-icon mouse-icon"></span>Pulsar Xlite V3 Large</li>
+              <li><img class="use-icon use-img" src="./assets/icons/hardware-mouse.svg" alt="" draggable="false" />Pulsar Xlite V3 Large</li>
             </ul>
           </fieldset>
           <fieldset class="uses-fieldset">
@@ -129,7 +118,7 @@
         </div>
       </section>
 
-      <section class="window github-repos-window active" id="github" style="left: 9%; top: 10%; width: 390px; height: 410px" aria-label="GitHub repositories window">
+      <section class="window github-repos-window active" id="github" style="left: 38%; top: 3%; width: 390px; height: 410px" aria-label="GitHub repositories window">
         <header class="window-titlebar xp-titlebar" data-drag-handle>
           <div class="title-left">
             <img class="asset-icon title-asset" src="./assets/icons/social-github.svg" alt="" draggable="false" />
@@ -170,7 +159,7 @@
         </div>
       </section>
 
-      <section class="window github-contrib-window active" id="contributions" style="left: 30%; top: 56%; width: 735px; height: 210px" aria-label="GitHub contributions window">
+      <section class="window github-contrib-window active" id="contributions" style="left: 34%; top: 71%; width: 735px; height: 220px" aria-label="GitHub contributions window">
         <header class="window-titlebar xp-titlebar" data-drag-handle>
           <div class="title-left">
             <img class="asset-icon title-asset" src="./assets/icons/social-github.svg" alt="" draggable="false" />
@@ -197,7 +186,7 @@
         </div>
       </section>
 
-      <section class="window about-window active" id="about" style="left: 66%; top: 10%; width: 410px; height: 350px" aria-label="About me window">
+      <section class="window about-window active" id="about" style="left: 10%; top: 3%; width: 410px; height: 350px" aria-label="About me window">
         <header class="window-titlebar xp-titlebar" data-drag-handle>
           <div class="title-left">
             <span class="title-glyph about-mark" aria-hidden="true">i</span>
@@ -237,10 +226,10 @@
         </div>
       </section>
 
-      <section class="window media-window" id="media" style="left: 47%; top: 32%; width: 430px; height: 430px" aria-label="Media Player window">
+      <section class="window media-window active" id="media" style="left: 70%; top: 3%; width: 430px; height: 430px" aria-label="Media Player window">
         <header class="window-titlebar dark-titlebar media-titlebar" data-drag-handle>
           <div class="title-left">
-            <span class="title-glyph media-mark" aria-hidden="true">▶</span>
+            <img class="asset-icon title-asset" src="./assets/icons/media-player.svg" alt="" draggable="false" />
             <span>Media Player</span>
           </div>
           <div class="window-controls">
@@ -342,16 +331,15 @@ This desktop is a Windows 10-style link hub for my GitHub projects and socials.<
           <button type="button" aria-label="Menu">☰</button>
           <span></span>
           <button type="button" aria-label="User">◉</button>
-          <button type="button" aria-label="Documents">□</button>
+          <button type="button" aria-label="Friends">□</button>
           <button type="button" data-open="settings" aria-label="Settings">⚙</button>
           <button type="button" aria-label="Power">⏻</button>
         </div>
         <div class="app-list">
           <h2>START</h2>
-          <button type="button" data-open="explorer">File Explorer</button>
+          <button type="button" data-open="explorer">Friends</button>
           <button type="button" data-open="github">GitHub</button>
           <button type="button" data-open="about">About Me</button>
-          <button type="button" data-open="notepad">Notepad</button>
           <button type="button" data-open="settings">Settings</button>
           <button type="button">Microsoft Edge</button>
           <button type="button">Photos</button>
@@ -361,8 +349,7 @@ This desktop is a Windows 10-style link hub for my GitHub projects and socials.<
           <h2>Productivity</h2>
           <button class="tile dark" type="button" data-open="github"><span class="github-mark" aria-hidden="true">GH</span><strong>GitHub</strong></button>
           <button class="tile teal" type="button" data-open="about"><span class="about-mark" aria-hidden="true">i</span><strong>About Me</strong></button>
-          <button class="tile orange" type="button" data-open="explorer"><img class="asset-icon tile-asset" src="./assets/icons/explorer.png" alt="" draggable="false" /><strong>File Explorer</strong></button>
-          <button class="tile blue" type="button" data-open="notepad"><img class="asset-icon tile-asset" src="./assets/icons/notepad.png" alt="" draggable="false" /><strong>Notepad</strong></button>
+          <button class="tile orange" type="button" data-open="explorer"><img class="asset-icon tile-asset" src="./assets/icons/documents.png" alt="" draggable="false" /><strong>Friends</strong></button>
           <button class="tile blue large" type="button" data-open="settings"><img class="asset-icon tile-asset" src="./assets/icons/settings.png" alt="" draggable="false" /><strong>Settings</strong></button>
         </div>
       </aside>
@@ -378,7 +365,7 @@ This desktop is a Windows 10-style link hub for my GitHub projects and socials.<
 
       <footer class="taskbar" aria-label="Windows 10-style taskbar">
         <button class="start-button" id="startButton" type="button" aria-label="Start">
-          <span aria-hidden="true"></span>
+          <img class="asset-icon start-asset" src="./assets/icons/windows-start.svg" alt="" draggable="false" />
         </button>
         <label class="task-search">
           <span aria-hidden="true"></span>
@@ -388,9 +375,8 @@ This desktop is a Windows 10-style link hub for my GitHub projects and socials.<
         <button class="task-icon task-view" type="button" aria-label="Task View"></button>
         <button class="task-icon" type="button" data-open="github" aria-label="GitHub"><img class="asset-icon task-asset" src="./assets/icons/social-github.svg" alt="" draggable="false" /></button>
         <button class="task-icon" type="button" data-open="about" aria-label="About Me"><span class="task-mark about-mark" aria-hidden="true">i</span></button>
-        <button class="task-icon" type="button" data-open="media" aria-label="Media Player"><span class="task-mark media-mark" aria-hidden="true">▶</span></button>
-        <button class="task-icon folder active" type="button" data-open="explorer" aria-label="File Explorer"><img class="asset-icon task-asset" src="./assets/icons/explorer.png" alt="" draggable="false" /></button>
-        <button class="task-icon note" type="button" data-open="notepad" aria-label="Notepad"><img class="asset-icon task-asset" src="./assets/icons/notepad.png" alt="" draggable="false" /></button>
+        <button class="task-icon" type="button" data-open="media" aria-label="Media Player"><img class="asset-icon task-asset" src="./assets/icons/media-player.svg" alt="" draggable="false" /></button>
+        <button class="task-icon folder active" type="button" data-open="explorer" aria-label="Friends"><img class="asset-icon task-asset" src="./assets/icons/documents.png" alt="" draggable="false" /></button>
         <button class="task-icon gear" type="button" data-open="settings" aria-label="Settings"><img class="asset-icon task-asset" src="./assets/icons/settings.png" alt="" draggable="false" /></button>
         <div class="task-spacer"></div>
         <button class="tray-caret" type="button" aria-label="Show hidden icons"></button>

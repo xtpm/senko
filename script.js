@@ -466,7 +466,7 @@ document.addEventListener("keydown", (event) => {
 
 updateClock();
 window.setInterval(updateClock, 1000);
-focusWindow(getWindow("github"));
+focusWindow(getWindow("media"));
 syncTaskbar();
 updateLanyard();
 window.setInterval(updateLanyard, 60000);

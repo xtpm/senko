@@ -1,14 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-label="Keyboard">
-  <rect x="6" y="12" width="52" height="40" rx="5" fill="#f7f7f7" stroke="#111" stroke-width="5"/>
-  <g fill="#111">
-    <rect x="14" y="22" width="6" height="6"/>
-    <rect x="24" y="22" width="6" height="6"/>
-    <rect x="34" y="22" width="6" height="6"/>
-    <rect x="44" y="22" width="6" height="6"/>
-    <rect x="14" y="34" width="8" height="6"/>
-    <rect x="26" y="34" width="6" height="6"/>
-    <rect x="36" y="34" width="6" height="6"/>
-    <rect x="46" y="34" width="8" height="6"/>
-    <rect x="18" y="44" width="28" height="5"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Keyboard">
+  <path fill="#777" d="M41 4h2v4h-2V4Zm2 4h4v2h-4V8Zm4 2h2v6h-2v-6Zm-5 6h5v2h-5v-2Zm-6 2h6v2h-6v-2Zm-8 2h8v2h-8v-2Zm-10 2h10v2H18v-2Z"/>
+  <path fill="#111" d="M43 8h4v2h-4V8Zm4 2h2v6h-2v-6Zm2 6h2v2h-2v-2Zm-2 2h2v2h-2v-2Zm-7 0h7v2h-7v-2Zm-7 2h7v2h-7v-2Zm-8 2h8v2h-8v-2Zm-8 2h8v2h-8v-2Z"/>
+  <path fill="#e6e600" d="M39 8h4v6h-4V8Z"/>
+  <path fill="#fff" d="M37 10h2v4h-2v-4Z"/>
+  <path fill="#8f8f8f" d="M8 27h47v4H8v-4Zm-3 4h3v28H5V31Zm50 0h4v28h-4V31ZM8 59h47v3H8v-3Z"/>
+  <path fill="#1f1f1f" d="M8 31h47v28H8V31Zm4 5v19h39V36H12Z"/>
+  <path fill="#555" d="M12 36h39v4H12v-4Z"/>
+  <path fill="#f3f3f3" d="M15 42h4v4h-4v-4Zm7 0h4v4h-4v-4Zm7 0h4v4h-4v-4Zm7 0h4v4h-4v-4Zm7 0h4v4h-4v-4Zm-28 7h7v4h-7v-4Zm10 0h4v4h-4v-4Zm7 0h4v4h-4v-4Zm7 0h4v4h-4v-4Zm7 0h5v4h-5v-4Z"/>
+  <path fill="#bdbdbd" d="M15 42h4v1h-4v-1Zm7 0h4v1h-4v-1Zm7 0h4v1h-4v-1Zm7 0h4v1h-4v-1Zm7 0h4v1h-4v-1Zm-28 7h7v1h-7v-1Zm10 0h4v1h-4v-1Zm7 0h4v1h-4v-1Zm7 0h4v1h-4v-1Zm7 0h5v1h-5v-1Z"/>
+  <path fill="#f3f3f3" d="M22 55h19v3H22v-3Z"/>
+  <path fill="#0d0d0d" d="M8 59h47v3H8v-3Zm47-28h4v28h-4V31Z"/>
 </svg>

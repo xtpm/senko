@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Windows">
+  <path fill="#fff" d="M78 128 228 99v151H78V128Zm166-32 190-36v190H244V96ZM78 267h150v147L78 385V267Zm166 0h190v190l-190-36V267Z"/>
+  <path fill="#00adef" opacity=".65" d="M228 99v151h7V98l-7 1Zm0 168v147l7 1V267h-7Z"/>
+</svg>
