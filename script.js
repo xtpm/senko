@@ -214,7 +214,7 @@ function seededLevel(index) {
 }
 
 function contributionColor(level) {
-  return ["#e6ebef", "#9be9a8", "#40c463", "#30a14e", "#216e39"][level] || "#e6ebef";
+  return ["#161b22", "#9be9a8", "#40c463", "#30a14e", "#216e39"][level] || "#161b22";
 }
 
 function paintContributionImage(rects, width) {

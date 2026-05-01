@@ -19,11 +19,15 @@
           <span>Friends</span>
         </button>
         <button class="desktop-icon" type="button" data-open="github">
+          <img class="asset-icon desktop-asset" src="./assets/icons/folder.png" alt="" draggable="false" />
+          <span>Projects</span>
+        </button>
+        <button class="desktop-icon" type="button" data-open="github">
           <img class="asset-icon desktop-asset" src="./assets/icons/social-github.svg" alt="" draggable="false" />
           <span>GitHub</span>
         </button>
         <button class="desktop-icon" type="button" data-open="about">
-          <span class="desktop-asset about-mark" aria-hidden="true">i</span>
+          <img class="asset-icon desktop-asset" src="./assets/icons/about-me.ico" alt="" draggable="false" />
           <span>About Me</span>
         </button>
         <button class="desktop-icon" type="button" data-open="media">
@@ -122,12 +126,12 @@
         <header class="window-titlebar xp-titlebar" data-drag-handle>
           <div class="title-left">
             <img class="asset-icon title-asset" src="./assets/icons/social-github.svg" alt="" draggable="false" />
-            <span>Repos</span>
+            <span>Projects</span>
           </div>
           <div class="window-controls">
-            <button type="button" data-minimize="github" aria-label="Minimize Repos">-</button>
-            <button type="button" data-maximize="github" aria-label="Maximize Repos">□</button>
-            <button type="button" data-close="github" aria-label="Close Repos">x</button>
+            <button type="button" data-minimize="github" aria-label="Minimize Projects">-</button>
+            <button type="button" data-maximize="github" aria-label="Maximize Projects">□</button>
+            <button type="button" data-close="github" aria-label="Close Projects">x</button>
           </div>
         </header>
         <div class="repo-window-body">
@@ -189,7 +193,7 @@
       <section class="window about-window active" id="about" style="left: 10%; top: 3%; width: 410px; height: 350px" aria-label="About me window">
         <header class="window-titlebar xp-titlebar" data-drag-handle>
           <div class="title-left">
-            <span class="title-glyph about-mark" aria-hidden="true">i</span>
+            <img class="asset-icon title-asset" src="./assets/icons/about-me.ico" alt="" draggable="false" />
             <span>About Me</span>
           </div>
           <div class="window-controls">
@@ -299,11 +303,11 @@ This desktop is a Windows 10-style link hub for my GitHub projects and socials.<
         </footer>
       </section>
 
-      <section class="window settings-window" id="settings" style="left: 42%; top: 24%; width: 610px; height: 380px" aria-label="Settings window">
+      <section class="window settings-window" id="settings" style="left: 42%; top: 24%; width: 610px; height: 380px" aria-label="Active Projects window">
         <header class="window-titlebar" data-drag-handle>
           <div class="title-left">
-            <img class="asset-icon title-asset" src="./assets/icons/settings.png" alt="" draggable="false" />
-            <span>Settings</span>
+            <img class="asset-icon title-asset" src="./assets/icons/folder.png" alt="" draggable="false" />
+            <span>Active Projects</span>
           </div>
           <div class="window-controls">
             <button type="button" data-minimize="settings" aria-label="Minimize Settings">-</button>
@@ -311,11 +315,11 @@ This desktop is a Windows 10-style link hub for my GitHub projects and socials.<
             <button type="button" data-close="settings" aria-label="Close Settings">×</button>
           </div>
         </header>
-        <div class="settings-body">
-          <h2>Windows Settings</h2>
+        <div class="settings-body active-projects-body">
+          <h2>Active Projects</h2>
           <label class="settings-search">
-            <span>Find a setting</span>
-            <input aria-label="Find a setting" />
+            <span>Search projects</span>
+            <input aria-label="Search projects" />
           </label>
           <div class="settings-grid">
             <button type="button"><span>⚙</span><strong>System</strong><small>Display, sound, notifications</small></button>
@@ -348,7 +352,7 @@ This desktop is a Windows 10-style link hub for my GitHub projects and socials.<
         <div class="tiles">
           <h2>Productivity</h2>
           <button class="tile dark" type="button" data-open="github"><span class="github-mark" aria-hidden="true">GH</span><strong>GitHub</strong></button>
-          <button class="tile teal" type="button" data-open="about"><span class="about-mark" aria-hidden="true">i</span><strong>About Me</strong></button>
+          <button class="tile teal" type="button" data-open="about"><img class="asset-icon tile-asset" src="./assets/icons/about-me.ico" alt="" draggable="false" /><strong>About Me</strong></button>
           <button class="tile orange" type="button" data-open="explorer"><img class="asset-icon tile-asset" src="./assets/icons/documents.png" alt="" draggable="false" /><strong>Friends</strong></button>
           <button class="tile blue large" type="button" data-open="settings"><img class="asset-icon tile-asset" src="./assets/icons/settings.png" alt="" draggable="false" /><strong>Settings</strong></button>
         </div>
@@ -371,10 +375,8 @@ This desktop is a Windows 10-style link hub for my GitHub projects and socials.<
           <span aria-hidden="true"></span>
           <input aria-label="Search" placeholder="Type here to search" />
         </label>
-        <button class="task-icon cortana" type="button" aria-label="Cortana"></button>
-        <button class="task-icon task-view" type="button" aria-label="Task View"></button>
         <button class="task-icon" type="button" data-open="github" aria-label="GitHub"><img class="asset-icon task-asset" src="./assets/icons/social-github.svg" alt="" draggable="false" /></button>
-        <button class="task-icon" type="button" data-open="about" aria-label="About Me"><span class="task-mark about-mark" aria-hidden="true">i</span></button>
+        <button class="task-icon" type="button" data-open="about" aria-label="About Me"><img class="asset-icon task-asset" src="./assets/icons/about-me.ico" alt="" draggable="false" /></button>
         <button class="task-icon" type="button" data-open="media" aria-label="Media Player"><img class="asset-icon task-asset" src="./assets/icons/media-player.svg" alt="" draggable="false" /></button>
         <button class="task-icon folder active" type="button" data-open="explorer" aria-label="Friends"><img class="asset-icon task-asset" src="./assets/icons/documents.png" alt="" draggable="false" /></button>
         <button class="task-icon gear" type="button" data-open="settings" aria-label="Settings"><img class="asset-icon task-asset" src="./assets/icons/settings.png" alt="" draggable="false" /></button>

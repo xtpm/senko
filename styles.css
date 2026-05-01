@@ -1581,6 +1581,85 @@ button {
   border-left: 1px solid #d2d2d2;
 }
 
+.github-repos-window {
+  border-color: #1b1f23;
+  background: #111418;
+}
+
+.github-repos-window .xp-titlebar {
+  color: #f4f4f4;
+  background: #171a1f;
+}
+
+.github-repos-window .window-controls button {
+  color: #f4f4f4;
+}
+
+.github-repos-window .window-controls button:hover {
+  background: #2a3038;
+}
+
+.github-repos-window .window-controls button:last-child:hover {
+  background: #e81123;
+}
+
+.github-repos-window .repo-window-body {
+  color: #f2f2f2;
+  background: #111418;
+}
+
+.github-repos-window .repo-toolbar {
+  border-bottom-color: #2a3038;
+  background: #171a1f;
+}
+
+.github-repos-window .repo-toolbar span {
+  color: #c9d1d9;
+}
+
+.github-repos-window .repo-toolbar button {
+  border-color: #3a414c;
+  color: #f2f2f2;
+  background: #242a32;
+}
+
+.github-repos-window .repo-toolbar button:hover {
+  border-color: #0078d7;
+  background: #1e3d58;
+}
+
+.github-repos-window .repo-list {
+  background: #0d1117;
+}
+
+.github-repos-window .repo-list-row {
+  border-bottom-color: #252b33;
+  color: #f0f6fc;
+}
+
+.github-repos-window .repo-list-row:hover {
+  background: #161b22;
+}
+
+.github-repos-window .repo-list-row span {
+  color: #9aa4af;
+}
+
+.github-repos-window .repo-list-row small {
+  color: #8b949e;
+}
+
+.github-repos-window .repo-statusbar {
+  border-top-color: #2a3038;
+  color: #c9d1d9;
+  background: #171a1f;
+}
+
+.github-repos-window .repo-statusbar span,
+.github-repos-window .repo-statusbar span:last-child {
+  border-color: #2a3038;
+}
+
 .contrib-body {
   padding-top: 10px;
   overflow: hidden;
@@ -1747,7 +1826,21 @@ button {
 }
 
 .about-summary strong span {
-  color: #003ad6;
+  color: #58a6ff;
+}
+
+@keyframes tpm-rgb {
+  0% { color: #ff3b5c; }
+  20% { color: #ff9f1c; }
+  40% { color: #2ee86f; }
+  60% { color: #22d3ee; }
+  80% { color: #7c5cff; }
+  100% { color: #ff3b5c; }
+}
+
+.about-summary strong span {
+  animation: tpm-rgb 2.6s linear infinite;
+  font-weight: 700;
 }
 
 .about-text {
@@ -2295,6 +2388,252 @@ button {
   border-bottom: 2px solid #fff;
   transform: rotate(-45deg);
   content: "";
+}
+
+/* Dark mode layer */
+.window,
+.about-window,
+.uses-window,
+.github-repos-window,
+.github-contrib-window,
+.settings-window {
+  border-color: #252b33;
+  background: #101317;
+  color: #f0f6fc;
+}
+
+.window.focused {
+  border-color: #0078d7;
+}
+
+.window-titlebar,
+.xp-titlebar,
+.github-repos-window .xp-titlebar {
+  color: #f4f4f4;
+  background: #171a1f;
+}
+
+.title-left,
+.window-controls button,
+.xp-titlebar .window-controls button,
+.github-repos-window .window-controls button {
+  color: #f4f4f4;
+}
+
+.window-controls button:hover,
+.xp-titlebar .window-controls button:hover,
+.github-repos-window .window-controls button:hover {
+  background: #2a3038;
+}
+
+.window-controls button:last-child:hover,
+.xp-titlebar .window-controls button:last-child:hover,
+.github-repos-window .window-controls button:last-child:hover {
+  color: #fff;
+  background: #e81123;
+}
+
+.ribbon,
+.notepad-menu,
+.address-bar,
+.settings-header,
+.repo-toolbar,
+.github-repos-window .repo-toolbar {
+  border-color: #2a3038;
+  color: #d7dde5;
+  background: #171a1f;
+}
+
+.ribbon button,
+.notepad-menu button,
+.address-bar button,
+.crumb,
+.explorer-search,
+.settings-search,
+.repo-toolbar button,
+.github-repos-window .repo-toolbar button {
+  border-color: #3a414c;
+  color: #f2f2f2;
+  background: #242a32;
+}
+
+.ribbon button:hover,
+.notepad-menu button:hover,
+.address-bar button:hover,
+.folder-grid button:hover,
+.folder-grid a:hover,
+.settings-grid button:hover,
+.repo-toolbar button:hover,
+.github-repos-window .repo-toolbar button:hover,
+.context-menu button:hover {
+  border-color: #0078d7;
+  background: #1e3d58;
+}
+
+.explorer-search input,
+.settings-search input,
+.task-search input,
+.notepad-window textarea {
+  color: #f0f6fc;
+}
+
+.explorer-search span,
+.settings-search span {
+  color: #8b949e;
+}
+
+.explorer-body,
+.explorer-content,
+.repo-window-body,
+.contrib-body,
+.about-dialog,
+.uses-dialog,
+.settings-body,
+.notepad-window textarea,
+.github-repos-window .repo-window-body {
+  color: #f0f6fc;
+  background: #0d1117;
+}
+
+.explorer-sidebar {
+  border-color: #252b33;
+  background: #111418;
+}
+
+.explorer-sidebar button {
+  color: #d7dde5;
+}
+
+.explorer-sidebar button:hover,
+.explorer-sidebar .selected {
+  color: #fff;
+  background: #1e3d58;
+}
+
+.explorer-content h2,
+.folder-grid strong,
+.uses-fieldset li,
+.about-summary p,
+.about-text,
+.presence-status,
+.presence-status.online,
+.presence-status.idle,
+.presence-status.dnd,
+.presence-status.offline {
+  color: #f0f6fc;
+}
+
+.folder-grid small,
+.empty-recent,
+.repo-toolbar span,
+.repo-list-row span,
+.repo-list-row small,
+.github-repos-window .repo-toolbar span,
+.github-repos-window .repo-list-row span,
+.github-repos-window .repo-list-row small {
+  color: #9aa4af;
+}
+
+.folder-grid .friend-avatar,
+.lanyard-avatar {
+  border-color: #3a414c;
+  background: #0d1117;
+}
+
+.social-fieldset,
+.uses-fieldset {
+  border-color: #3a414c;
+  color: #f0f6fc;
+  background: #111418;
+}
+
+.social-fieldset legend,
+.uses-fieldset legend {
+  color: #d7dde5;
+}
+
+.social-buttons a,
+.settings-grid button {
+  border-color: #3a414c;
+  color: #f0f6fc;
+  background: #242a32;
+}
+
+.social-buttons a:hover {
+  border-color: #0078d7;
+  background: #1e3d58;
+}
+
+.about-summary strong span {
+  color: #58a6ff;
+}
+
+.repo-list,
+.github-repos-window .repo-list {
+  background: #0d1117;
+}
+
+.repo-list-row,
+.github-repos-window .repo-list-row {
+  border-color: #252b33;
+  color: #f0f6fc;
+}
+
+.repo-list-row:hover,
+.github-repos-window .repo-list-row:hover {
+  background: #161b22;
+}
+
+.repo-statusbar,
+.statusbar,
+.notepad-status,
+.github-repos-window .repo-statusbar {
+  border-color: #2a3038;
+  color: #c9d1d9;
+  background: #171a1f;
+}
+
+.repo-statusbar span,
+.repo-statusbar span:last-child {
+  border-color: #2a3038;
+}
+
+.contrib-months,
+.contrib-legend {
+  color: #c9d1d9;
+}
+
+.contrib-cell,
+.contrib-legend i {
+  background: #161b22;
+  fill: #161b22;
+}
+
+.context-menu {
+  border-color: #3a414c;
+  color: #f0f6fc;
+  background: #171a1f;
+}
+
+.context-menu button {
+  color: #f0f6fc;
+}
+
+.context-menu hr {
+  border-top-color: #2a3038;
+}
+
+.task-search {
+  border-color: rgba(255, 255, 255, 0.08);
+  background: #171a1f;
+}
+
+.task-search span::before {
+  color: #f0f6fc;
+}
+
+.task-search input::placeholder {
+  color: #c9d1d9;
 }
 
 @media (max-width: 860px) {
