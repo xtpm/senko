@@ -627,24 +627,37 @@ button {
   gap: 20px;
 }
 
-.settings-grid button {
+.settings-grid button,
+.settings-grid a {
   display: grid;
   grid-template-columns: 44px 1fr;
   grid-template-rows: auto auto;
   gap: 2px 12px;
   min-height: 72px;
   padding: 10px;
+  color: inherit;
   text-align: left;
+  text-decoration: none;
+  transition: background 140ms ease, outline-color 140ms ease, transform 140ms ease;
 }
 
-.settings-grid button:hover {
+.settings-grid button:hover,
+.settings-grid a:hover {
   background: #e6e6e6;
+  transform: translateY(-1px);
 }
 
-.settings-grid button > span {
+.settings-grid .project-card.selected {
+  outline: 1px solid #0078d7;
+  background: #1e3d58;
+}
+
+.settings-grid button > span,
+.settings-card-icon {
   grid-row: 1 / 3;
-  color: var(--win-blue);
-  font-size: 30px;
+  width: 34px;
+  height: 34px;
+  align-self: center;
 }
 
 .settings-grid strong {
@@ -652,7 +665,89 @@ button {
 }
 
 .settings-grid small {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   color: #666;
+}
+
+.active-projects-body .settings-grid > button:not(.project-card) {
+  display: none;
+}
+
+.active-projects-body.detail-open h2,
+.active-projects-body.detail-open .settings-search,
+.active-projects-body.detail-open .settings-grid {
+  display: none;
+}
+
+@keyframes project-detail-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.project-detail {
+  min-height: 100%;
+  display: none;
+  padding: 18px 20px;
+  border: 1px solid #3a414c;
+  background: #111418;
+}
+
+.active-projects-body.detail-open .project-detail {
+  display: block;
+  animation: project-detail-in 180ms ease-out both;
+}
+
+.project-back {
+  height: 28px;
+  margin-bottom: 22px;
+  padding: 0 12px;
+  border: 1px solid #3a414c;
+  color: #f0f6fc;
+  background: #242a32;
+}
+
+.project-back:hover {
+  border-color: #0078d7;
+  background: #1e3d58;
+}
+
+.project-detail strong {
+  display: block;
+  margin-bottom: 12px;
+  color: #f0f6fc;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.project-detail p {
+  margin: 0;
+  color: #c9d1d9;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.project-status {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #8b949e;
+}
+
+.project-status.active {
+  background: #3fb950;
+}
+
+.project-status.idle {
+  background: #d29922;
 }
 
 .hub-window {
@@ -2463,6 +2558,7 @@ button {
 .folder-grid button:hover,
 .folder-grid a:hover,
 .settings-grid button:hover,
+.settings-grid a:hover,
 .repo-toolbar button:hover,
 .github-repos-window .repo-toolbar button:hover,
 .context-menu button:hover {
@@ -2553,7 +2649,8 @@ button {
 }
 
 .social-buttons a,
-.settings-grid button {
+.settings-grid button,
+.settings-grid a {
   border-color: #3a414c;
   color: #f0f6fc;
   background: #242a32;

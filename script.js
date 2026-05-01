@@ -24,6 +24,11 @@ const repoCount = document.querySelector("#repoCount");
 const refreshRepos = document.querySelector("#refreshRepos");
 const contribGrid = document.querySelector("#contribGrid");
 const contribMonths = document.querySelector("#contribMonths");
+const projectCards = [...document.querySelectorAll(".project-card")];
+const projectDetailTitle = document.querySelector("#projectDetailTitle");
+const projectDetailText = document.querySelector("#projectDetailText");
+const activeProjectsBody = document.querySelector(".active-projects-body");
+const projectBack = document.querySelector("#projectBack");
 
 const DISCORD_USER_ID = "1177326138926837884";
 const GITHUB_USER = "xtpm";
@@ -474,3 +479,16 @@ window.setInterval(updateMediaProgress, 1000);
 loadRepos();
 loadContributions();
 refreshRepos?.addEventListener("click", loadRepos);
+
+projectCards.forEach((card) => {
+  card.addEventListener("click", () => {
+    projectCards.forEach((item) => item.classList.toggle("selected", item === card));
+    projectDetailTitle.textContent = card.dataset.projectTitle || "Project";
+    projectDetailText.textContent = card.dataset.projectInfo || "No project details yet.";
+    activeProjectsBody.classList.add("detail-open");
+  });
+});
+
+projectBack?.addEventListener("click", () => {
+  activeProjectsBody.classList.remove("detail-open");
+});

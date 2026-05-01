@@ -67,9 +67,6 @@
         <div class="explorer-body">
           <aside class="explorer-sidebar">
             <button class="selected" type="button">Friends</button>
-            <button type="button">Desktop</button>
-            <button type="button">Website</button>
-            <button type="button">No link</button>
           </aside>
           <section class="explorer-content">
             <h2>Friends (6)</h2>
@@ -310,9 +307,9 @@ This desktop is a Windows 10-style link hub for my GitHub projects and socials.<
             <span>Active Projects</span>
           </div>
           <div class="window-controls">
-            <button type="button" data-minimize="settings" aria-label="Minimize Settings">-</button>
-            <button type="button" data-maximize="settings" aria-label="Maximize Settings">□</button>
-            <button type="button" data-close="settings" aria-label="Close Settings">×</button>
+            <button type="button" data-minimize="settings" aria-label="Minimize Active Projects">-</button>
+            <button type="button" data-maximize="settings" aria-label="Maximize Active Projects">□</button>
+            <button type="button" data-close="settings" aria-label="Close Active Projects">×</button>
           </div>
         </header>
         <div class="settings-body active-projects-body">
@@ -322,11 +319,20 @@ This desktop is a Windows 10-style link hub for my GitHub projects and socials.<
             <input aria-label="Search projects" />
           </label>
           <div class="settings-grid">
+            <button class="project-card selected" type="button" data-project-title="kuudere.cc" data-project-info="Personal web project and profile space. Currently active."><img class="asset-icon settings-card-icon" src="./assets/icons/folder.png" alt="" draggable="false" /><strong>kuudere.cc</strong><small><i class="project-status active"></i>active project</small></button>
+            <button class="project-card" type="button" data-project-title="kobeni.net" data-project-info="Landing page project with a focused web presence. Currently active."><img class="asset-icon settings-card-icon" src="./assets/icons/folder.png" alt="" draggable="false" /><strong>kobeni.net</strong><small><i class="project-status active"></i>active project</small></button>
+            <button class="project-card" type="button" data-project-title="yotsuba.cc" data-project-info="Domain/project slot for an upcoming site concept. Information can be expanded later."><img class="asset-icon settings-card-icon" src="./assets/icons/folder.png" alt="" draggable="false" /><strong>yotsuba.cc</strong><small><i class="project-status idle"></i>active project</small></button>
+            <button class="project-card" type="button" data-project-title="Luck Software" data-project-info="Software project entry for tools, experiments, or releases under the Luck Software name."><img class="asset-icon settings-card-icon" src="./assets/icons/folder.png" alt="" draggable="false" /><strong>Luck Software</strong><small><i class="project-status idle"></i>active project</small></button>
             <button type="button"><span>⚙</span><strong>System</strong><small>Display, sound, notifications</small></button>
             <button type="button"><span>🖥</span><strong>Personalization</strong><small>Background, lock screen, colors</small></button>
             <button type="button"><span>🌐</span><strong>Network & Internet</strong><small>Wi-Fi, airplane mode, VPN</small></button>
             <button type="button"><span>🔒</span><strong>Privacy</strong><small>Location, camera, microphone</small></button>
           </div>
+          <section class="project-detail" aria-live="polite">
+            <button class="project-back" type="button" id="projectBack">Back</button>
+            <strong id="projectDetailTitle">kuudere.cc</strong>
+            <p id="projectDetailText">Personal web project and profile space. Currently active.</p>
+          </section>
         </div>
       </section>
 
@@ -336,7 +342,7 @@ This desktop is a Windows 10-style link hub for my GitHub projects and socials.<
           <span></span>
           <button type="button" aria-label="User">◉</button>
           <button type="button" aria-label="Friends">□</button>
-          <button type="button" data-open="settings" aria-label="Settings">⚙</button>
+          <button type="button" data-open="settings" aria-label="Active Projects">⚙</button>
           <button type="button" aria-label="Power">⏻</button>
         </div>
         <div class="app-list">
@@ -344,7 +350,7 @@ This desktop is a Windows 10-style link hub for my GitHub projects and socials.<
           <button type="button" data-open="explorer">Friends</button>
           <button type="button" data-open="github">GitHub</button>
           <button type="button" data-open="about">About Me</button>
-          <button type="button" data-open="settings">Settings</button>
+          <button type="button" data-open="settings">Active Projects</button>
           <button type="button">Microsoft Edge</button>
           <button type="button">Photos</button>
           <button type="button">Calculator</button>
@@ -354,7 +360,7 @@ This desktop is a Windows 10-style link hub for my GitHub projects and socials.<
           <button class="tile dark" type="button" data-open="github"><span class="github-mark" aria-hidden="true">GH</span><strong>GitHub</strong></button>
           <button class="tile teal" type="button" data-open="about"><img class="asset-icon tile-asset" src="./assets/icons/about-me.ico" alt="" draggable="false" /><strong>About Me</strong></button>
           <button class="tile orange" type="button" data-open="explorer"><img class="asset-icon tile-asset" src="./assets/icons/documents.png" alt="" draggable="false" /><strong>Friends</strong></button>
-          <button class="tile blue large" type="button" data-open="settings"><img class="asset-icon tile-asset" src="./assets/icons/settings.png" alt="" draggable="false" /><strong>Settings</strong></button>
+          <button class="tile blue large" type="button" data-open="settings"><img class="asset-icon tile-asset" src="./assets/icons/folder.png" alt="" draggable="false" /><strong>Active Projects</strong></button>
         </div>
       </aside>
 
@@ -363,7 +369,7 @@ This desktop is a Windows 10-style link hub for my GitHub projects and socials.<
         <button type="button">Sort by</button>
         <button type="button">Refresh</button>
         <hr />
-        <button type="button">Display settings</button>
+        <button type="button">Active projects</button>
         <button type="button">Personalize</button>
       </menu>
 
@@ -379,7 +385,7 @@ This desktop is a Windows 10-style link hub for my GitHub projects and socials.<
         <button class="task-icon" type="button" data-open="about" aria-label="About Me"><img class="asset-icon task-asset" src="./assets/icons/about-me.ico" alt="" draggable="false" /></button>
         <button class="task-icon" type="button" data-open="media" aria-label="Media Player"><img class="asset-icon task-asset" src="./assets/icons/media-player.svg" alt="" draggable="false" /></button>
         <button class="task-icon folder active" type="button" data-open="explorer" aria-label="Friends"><img class="asset-icon task-asset" src="./assets/icons/documents.png" alt="" draggable="false" /></button>
-        <button class="task-icon gear" type="button" data-open="settings" aria-label="Settings"><img class="asset-icon task-asset" src="./assets/icons/settings.png" alt="" draggable="false" /></button>
+        <button class="task-icon gear" type="button" data-open="settings" aria-label="Active Projects"><img class="asset-icon task-asset" src="./assets/icons/folder.png" alt="" draggable="false" /></button>
         <div class="task-spacer"></div>
         <button class="tray-caret" type="button" aria-label="Show hidden icons"></button>
         <button class="tray-icon network" type="button" aria-label="Network"></button>
